@@ -1,0 +1,12 @@
+<h1>
+    Lista de Usuarios
+</h1>
+
+<ul>
+    {% for usuario in usuarios %}
+    <li>
+        {{ usuario.nombre }} - {{ usuario.apellido }} - {{ usuario.email }} - <a href="{% url 'panel:edit' usuario.pk %}"> Editar</a> <a href="{% url 'panel:delete' usuario.pk %}"> Eliminar</a>
+    </li>
+    {% endfor %}
+
+</ul>
